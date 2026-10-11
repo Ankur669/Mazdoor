@@ -1,0 +1,8 @@
+﻿.vscode/
+apache-maven-3.9.16-bin.zip
+backend.zip
+
+**/target/
+**/.idea/
+**/*.class
+**/.env

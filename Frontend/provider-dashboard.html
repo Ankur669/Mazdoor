@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provider Dashboard - LocalServe</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+<header class="dashboard-navbar">
+
+<div class="logo">
+    Local<span>Serve</span>
+</div>
+
+
+<div class="dashboard-nav-right">
+
+    <span id="providerName"></span>
+
+    <button
+        class="logout-btn"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</div>
+
+</header>
+
+<main class="dashboard">
+
+<!-- ================= WELCOME ================= -->
+
+<section class="dashboard-welcome">
+
+    <div>
+
+        <p class="dashboard-label">
+            PROVIDER DASHBOARD
+        </p>
+
+        <h1>
+
+            Welcome,
+
+            <span id="providerWelcomeName">
+                Provider
+            </span>
+
+            👋
+
+        </h1>
+
+        <p>
+            Manage your services and connect with customers.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ACCOUNT ================= -->
+
+<section class="dashboard-section">
+
+    <div class="account-box">
+
+        <p class="dashboard-label">
+            YOUR ACCOUNT
+        </p>
+
+        <h2>
+            Provider Information
+        </h2>
+
+
+        <div class="account-details">
+
+
+            <div>
+
+                <span>
+                    Name
+                </span>
+
+                <strong id="providerAccountName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Email
+                </span>
+
+                <strong id="providerAccountEmail">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Phone
+                </span>
+
+                <strong id="providerAccountPhone">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Location
+                </span>
+
+                <strong id="providerAccountLocation">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Account Type
+                </span>
+
+                <strong>
+                    PROVIDER
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ADD SERVICE ================= -->
+
+<section class="dashboard-section">
+
+    <div class="account-box">
+
+        <p class="dashboard-label">
+            PROVIDER SERVICES
+        </p>
+
+        <h2>
+            Add a New Service
+        </h2>
+
+
+        <form
+            id="serviceForm"
+            class="service-form"
+        >
+
+
+            <div class="form-group">
+
+                <label for="serviceName">
+                    Service Name
+                </label>
+
+                <input
+                    type="text"
+                    id="serviceName"
+                    placeholder="Example: AC Servicing"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="category">
+                    Category
+                </label>
+
+                <input
+                    type="text"
+                    id="category"
+                    placeholder="Example: Home Repair"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="price">
+                    Base Price
+                </label>
+
+                <input
+                    type="number"
+                    id="price"
+                    min="0"
+                    step="0.01"
+                    placeholder="Example: 500"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="serviceLocation">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="serviceLocation"
+                    placeholder="Example: Dibrugarh"
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Describe your service..."
+                ></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="dashboard-submit-btn"
+            >
+                Add Service
+            </button>
+
+
+            <p
+                id="serviceMessage"
+                class="service-message"
+            ></p>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MY SERVICES ================= -->
+
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+
+        <p class="dashboard-label">
+            MY SERVICES
+        </p>
+
+        <h2>
+            Services You Offer
+        </h2>
+
+    </div>
+
+
+    <div
+        class="dashboard-service-grid"
+        id="providerServiceGrid"
+    >
+
+        <p>
+            Loading your services...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CUSTOMER BOOKINGS ================= -->
+
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+
+        <p class="dashboard-label">
+            CUSTOMER BOOKINGS
+        </p>
+
+        <h2>
+            Booking Requests
+        </h2>
+
+    </div>
+
+
+    <div
+        class="dashboard-service-grid"
+        id="providerBookingGrid"
+    >
+
+        <p>
+            Loading booking requests...
+        </p>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+```
+<div class="footer-content">
+
+
+    <div>
+
+        <h2>
+            Local<span>Serve</span>
+        </h2>
+
+        <p>
+            Connecting people with trusted local professionals.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            © 2026 LocalServe. All rights reserved.
+        </p>
+
+    </div>
+
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+
+</html>

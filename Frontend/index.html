@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalServe | Trusted Local Services</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Local<span>Serve</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button
+            class="login-btn"
+            onclick="goToLogin()">
+            Login
+        </button>
+
+        <button
+            class="signup-btn"
+            onclick="goToRegister()">
+            Sign Up
+        </button>
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                YOUR LOCAL SERVICE MARKETPLACE
+            </p>
+
+            <h1>
+                Trusted Home Services,
+                <span>Right at Your Doorstep.</span>
+            </h1>
+
+            <p class="hero-text">
+                Find trusted local professionals for everyday
+                services. From electrical repairs and plumbing
+                to drivers, gardening and beauty services —
+                LocalServe connects you with the right professional.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="hero-search">
+
+                <div class="search-box">
+
+                    <span class="search-icon">🔍</span>
+
+                    <input
+                        type="text"
+                        id="homeServiceSearch"
+                        placeholder="What service do you need?"
+                    >
+
+                </div>
+
+                <div class="location-box">
+
+                    <span>📍</span>
+
+                    <input
+                        type="text"
+                        id="homeLocationSearch"
+                        placeholder="Your location"
+                    >
+
+                </div>
+
+                <button
+                    class="hero-search-btn"
+                    onclick="searchHomeServices()">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-btn"
+                    onclick="goToRegister()">
+
+                    Get Started
+
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    onclick="scrollToServices()">
+
+                    Explore Services
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section
+        id="services"
+        class="services-section">
+
+        <div class="section-heading">
+
+            <p>
+                BROWSE SERVICES
+            </p>
+
+            <h2>
+                Find What You Need
+            </h2>
+
+            <span>
+                Choose a category and find the right service
+                from local professionals.
+            </span>
+
+        </div>
+
+
+        <!--
+            JavaScript will automatically create
+            the six category sections here.
+        -->
+
+        <div
+            id="serviceCategories"
+            class="category-container">
+
+            <div class="services-loading">
+                Loading available services...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY LOCALSERVE ================= -->
+
+    <section class="why-section">
+
+        <div class="section-heading">
+
+            <p>
+                WHY LOCALSERVE
+            </p>
+
+            <h2>
+                Services You Can Trust
+            </h2>
+
+            <span>
+                Everything you need to find and book
+                reliable local professionals.
+            </span>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Verified Professionals
+                </h3>
+
+                <p>
+                    Connect with local service providers
+                    registered on our platform.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ₹
+                </div>
+
+                <h3>
+                    Transparent Pricing
+                </h3>
+
+                <p>
+                    View service prices before requesting
+                    a professional.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Easy Booking
+                </h3>
+
+                <p>
+                    Find a service, choose a provider
+                    and request the service easily.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Local Providers
+                </h3>
+
+                <p>
+                    Find professionals serving your
+                    local area.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section
+        id="how-it-works"
+        class="how-section">
+
+        <div class="section-heading">
+
+            <p>
+                SIMPLE PROCESS
+            </p>
+
+            <h2>
+                How It Works
+            </h2>
+
+            <span>
+                Getting a local service has never been easier.
+            </span>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Choose a Category
+                </h3>
+
+                <p>
+                    Browse Electrical, Plumbing,
+                    Drivers, Gardening and Beauty services.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Select a Service
+                </h3>
+
+                <p>
+                    Choose the specific service you
+                    need from the available options.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Choose a Provider
+                </h3>
+
+                <p>
+                    Compare available local professionals
+                    and select the right one.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Book
+                </h3>
+
+                <p>
+                    Request the service and get the
+                    job done at your convenience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="about">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>
+                Local<span>Serve</span>
+            </h2>
+
+            <p>
+                Connecting people with trusted
+                local professionals.
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>
+                © 2026 LocalServe. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>

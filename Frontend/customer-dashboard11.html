@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Customer Dashboard - LocalServe</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<header class="dashboard-navbar">
+
+```
+<div class="logo">
+    Local<span>Serve</span>
+</div>
+
+<div class="dashboard-nav-right">
+
+    <span id="userName"></span>
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</div>
+```
+
+</header>
+
+<main class="dashboard">
+
+```
+<!-- ================= WELCOME ================= -->
+
+<section class="dashboard-welcome">
+
+    <div>
+
+        <p class="dashboard-label">
+            CUSTOMER DASHBOARD
+        </p>
+
+        <h1>
+            Welcome, <span id="welcomeName">Customer</span> 👋
+        </h1>
+
+        <p>
+            Find trusted professionals and manage your services.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK ACTIONS ================= -->
+
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+
+        <div>
+
+            <p class="dashboard-label">
+                QUICK ACTIONS
+            </p>
+
+            <h2>
+                What would you like to do?
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+        <!-- FIND SERVICE -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                🔎
+            </div>
+
+            <h3>
+                Find a Service
+            </h3>
+
+            <p>
+                Search for trusted service providers near you.
+            </p>
+
+            <button
+                class="dashboard-action"
+                onclick="findServices()">
+
+                Browse Services →
+
+            </button>
+
+        </div>
+
+
+        <!-- BOOKINGS -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                📅
+            </div>
+
+            <h3>
+                My Bookings
+            </h3>
+
+            <p>
+                View and manage your service bookings.
+            </p>
+
+            <button
+                class="dashboard-action"
+                onclick="viewBookings()">
+
+                View Bookings →
+
+            </button>
+
+        </div>
+
+
+        <!-- REVIEWS -->
+
+        <div class="dashboard-card">
+
+            <div class="dashboard-card-icon">
+                ⭐
+            </div>
+
+            <h3>
+                My Reviews
+            </h3>
+
+            <p>
+                View the reviews and ratings you've submitted.
+            </p>
+
+            <button
+                class="dashboard-action"
+                onclick="viewReviews()">
+
+                View Reviews →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+
+        <div>
+
+            <p class="dashboard-label">
+                SERVICES
+            </p>
+
+            <h2>
+                Available Services
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- Services from Spring Boot API -->
+
+    <div
+        class="dashboard-service-grid"
+        id="serviceGrid">
+
+        <p id="servicesLoading">
+            Loading services...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACCOUNT INFORMATION ================= -->
+
+<section class="dashboard-section">
+
+    <div class="account-box">
+
+        <div>
+
+            <p class="dashboard-label">
+                YOUR ACCOUNT
+            </p>
+
+            <h2>
+                Account Information
+            </h2>
+
+        </div>
+
+
+        <div class="account-details">
+
+            <div>
+
+                <span>
+                    Name
+                </span>
+
+                <strong id="accountName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Email
+                </span>
+
+                <strong id="accountEmail">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Phone
+                </span>
+
+                <strong id="accountPhone">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Location
+                </span>
+
+                <strong id="accountLocation">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Account Type
+                </span>
+
+                <strong id="accountRole">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+```
+<div class="footer-content">
+
+    <div>
+
+        <h2>
+            Local<span>Serve</span>
+        </h2>
+
+        <p>
+            Connecting people with trusted local professionals.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            © 2026 LocalServe. All rights reserved.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

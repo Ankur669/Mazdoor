@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Service Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Local<span>Serve</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn" onclick="goToLogin()">Login</button>
+            <button class="signup-btn" onclick="goToRegister()">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-tag">YOUR LOCAL SERVICE MARKETPLACE</p>
+
+                <h1>Find Trusted <span>Local Services</span> Near You</h1>
+
+                <p class="hero-text">
+                    Connect with reliable service providers in your area.
+                    Book electricians, plumbers, cleaners, tutors and more.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="goToRegister()">
+                        Get Started
+                    </button>
+
+                    <button class="secondary-btn" onclick="scrollToServices()">
+                        Explore Services
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+
+            <div class="section-heading">
+                <p>WHAT WE OFFER</p>
+                <h2>Popular Services</h2>
+                <span>Find the right professional for your needs</span>
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrician</h3>
+                    <p>Electrical repairs and installation services.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Plumber</h3>
+                    <p>Professional plumbing and repair services.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <h3>Cleaning</h3>
+                    <p>Home and office cleaning professionals.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Tutor</h3>
+                    <p>Find tutors for different subjects and skills.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>IT Services</h3>
+                    <p>Computer, software and technical assistance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Home Services</h3>
+                    <p>Reliable professionals for your home.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-section">
+
+            <div class="section-heading">
+                <p>SIMPLE PROCESS</p>
+                <h2>How It Works</h2>
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create an Account</h3>
+                    <p>Register as a customer or service provider.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find a Service</h3>
+                    <p>Search for services and providers near you.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Book a Provider</h3>
+                    <p>Choose a provider and request a service.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get the Job Done</h3>
+                    <p>Receive the service and leave a review.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="about">
+        <div class="footer-content">
+            <div>
+                <h2>Local<span>Serve</span></h2>
+                <p>Connecting people with trusted local professionals.</p>
+            </div>
+
+            <div>
+                <p>© 2026 LocalServe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
